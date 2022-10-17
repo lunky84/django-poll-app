@@ -33,3 +33,7 @@ Go to [http://127.0.0.1:8000/polls/](http://127.0.0.1:8000/polls) to view the si
 python manage.py migrate
 ```
 
+### Sources
+
+https://docs.docker.com/samples/django/
+https://docs.djangoproject.com/en/4.1/intro/tutorial01/
