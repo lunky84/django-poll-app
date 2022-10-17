@@ -13,3 +13,23 @@ cd django-poll-app
 ```shell
 devcontainer open
 ```
+
+### Check django version
+```shell
+python -m django --version
+```
+
+### Run the server
+
+```shell
+python manage.py runserver
+```
+
+Go to [http://127.0.0.1:8000/polls/](http://127.0.0.1:8000/polls) to view the site
+
+### Run migrations
+
+```shell
+python manage.py migrate
+```
+
