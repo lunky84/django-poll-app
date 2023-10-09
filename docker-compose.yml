@@ -1,17 +1,21 @@
 version: "3.9"
 
 services:
-  db:
+  poll-db:
+    container_name: poll-db
     image: postgres
     volumes:
-      - ./data/db:/var/lib/postgresql/data
+      - postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-  web:
+    networks:
+      - djangonetwork
+  poll-web:
+    container_name: poll-web
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
@@ -19,8 +23,17 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - POSTGRES_NAME=postgres
+      - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     depends_on:
-      - db
+      - poll-db
+    networks:
+      - djangonetwork
+      
+volumes:
+  postgres:
+
+networks:
+      djangonetwork:
+          driver: bridge

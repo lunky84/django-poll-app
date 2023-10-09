@@ -3,9 +3,9 @@
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],
-	"service": "web",
+	"service": "poll-web",
 	"runServices": [
-		"web"
+		"poll-web"
 	],
 	"workspaceFolder": "/workspace/"
 }
