@@ -14,6 +14,11 @@ cd django-poll-app
 devcontainer open
 ```
 
+### Check python version
+```shell
+python --version
+```
+
 ### Check django version
 ```shell
 python -m django --version
