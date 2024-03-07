@@ -30,7 +30,7 @@ python -m django --version
 python manage.py runserver
 ```
 
-Go to [http://127.0.0.1:8000/polls/](http://127.0.0.1:8000/polls) to view the site
+Go to [http://127.0.0.1:9000/polls/](http://127.0.0.1:9000/polls) to view the site
 
 ### Make migrations for polls app
 
